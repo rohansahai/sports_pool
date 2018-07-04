@@ -1,0 +1,2 @@
+class PoolUser < ApplicationRecord
+end
