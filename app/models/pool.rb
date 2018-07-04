@@ -49,8 +49,8 @@ class Pool < ApplicationRecord
     #   twilio_client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_AUTH_TOKEN']
     #   twilio_client.messages.create(
     #     from: ENV['TWILIO_PHONE_NUMBER'],
-    #     to: phone_number,
-    #     body: body
+    #     to: user.phone_number,
+    #     body: message
     #   )
     # rescue Twilio::REST::RequestError => e
     #   logger.error("Error sending twilio message to user #{name}")
