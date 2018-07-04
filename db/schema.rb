@@ -10,53 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_04_190043) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "games", force: :cascade do |t|
-    t.string "sport", null: false
-    t.integer "home_team_id", null: false
-    t.integer "away_team_id", null: false
-    t.integer "home_team_score"
-    t.integer "away_team_score"
-    t.integer "winner_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pool_users", force: :cascade do |t|
-    t.integer "pool_id", null: false
-    t.integer "user_id", null: false
-    t.integer "winner_pick_id", null: false
-    t.integer "home_team_score"
-    t.integer "away_team_score"
-    t.integer "rank"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pools", force: :cascade do |t|
-    t.string "name"
-    t.integer "game_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "teams", force: :cascade do |t|
-    t.string "name"
-    t.string "sport"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "phone_number"
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

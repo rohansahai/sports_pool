@@ -7,6 +7,7 @@ class CreatePoolUsers < ActiveRecord::Migration[5.2]
       t.integer :home_team_score
       t.integer :away_team_score
       t.integer :rank
+      t.timestamp, :initial_message_sent_at
 
       t.timestamps
     end
